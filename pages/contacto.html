@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Vivero</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav class="barra-navegacion">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../img/LogoEmpresa.png" alt="Logo de la empresa" />
+            </a>
+        </div>
+
+        <ul class="contenedor-lista ul">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+
+        <div class="redes-sociales">
+            <a href="https://youtube.com/@suculentaslove?si=uGCqCGYgVAMf0cbF" target="_blank" aria-label="Facebook">
+                <img src="../img/youtube.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.tiktok.com/@etelvinacaceres4?_t=8rQUdzvbaCt&_r=1" target="_blank" aria-label="Instagram">
+                <img src="../img/tiktok.svg" alt="Instagram" />
+            </a>
+        </div>
+    </nav>
+
+    <div id="contenedor-lista" class=".imagen-central">
+        <img src="../img/ImagenCentralPortada.jpeg" alt="Descripción de la imagen">                
+    </div>
+
+    <main class="fondo-verde">
+        <h1>Déjame tu consulta</h1>
+    
+        <form action="" method="post" class="formulario">
+            <fieldset>
+                <legend>Información Personal</legend>
+    
+                <label for="nombre">Nombre[*]</label>
+                <input type="text" name="nombre" id="nombre" size="20" maxlength="30" required><br><br>
+    
+                <label for="apellido">Apellido[*]</label>
+                <input type="text" name="apellido" id="apellido" size="20" maxlength="30" required><br><br>
+    
+                <label for="direccion">Dirección[*]</label>
+                <input type="text" name="direccion" id="direccion" size="40" maxlength="50" required><br><br>
+    
+                <label for="telefono">Número de Teléfono[*]</label>
+                <input type="tel" name="telefono" id="telefono" pattern="[0-9]{10}" placeholder="Ej: 1234567890" required><br><br>
+            </fieldset>
+    
+            <fieldset>
+                <legend>Consulta</legend>
+    
+                <label for="consulta">Escribe tu consulta</label><br>
+                <textarea name="consulta" id="consulta" cols="40" rows="10" placeholder="Escribe aquí tu consulta (máx. 300 caracteres)" maxlength="300" required></textarea>
+            </fieldset>
+    
+            <br>
+            <input type="submit" value="Enviar Consulta">
+            <input type="reset" value="Borrar Datos">
+        </form>
+    </main>
+</body>
+</html>
