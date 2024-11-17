@@ -1,20 +1,20 @@
-/*BARRA NAVEGACION*/
+
 .barra-navegacion {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #f2f1d4;
-    padding: 0 20px; /* Ajusta el espaciado horizontal */
-    height: 60px; /* Altura de la barra */
-    border-bottom: 2px solid #e0dfc6; /* Línea de separación */
-    position: fixed; /* Hace que la barra quede fija */
-    top: 0; /* Alinea la barra al borde superior */
-    left: 0; /* Alinea al borde izquierdo */
-    right: 0; /* Extiende al borde derecho */
-    z-index: 10; /* Asegura que esté encima de otros elementos */
+    padding: 0 20px; 
+    height: 60px; 
+    border-bottom: 2px solid #e0dfc6;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 10; 
 }
 
-/* LOGO */
+
 .logo img {
     height: 70px; 
     width: auto;
@@ -79,7 +79,7 @@
     display: block; 
 }
 
-/* Imagen central */
+
 .imagen-central {
     width: 100%;
     height: auto;
@@ -146,7 +146,7 @@ iframe {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* GALERIA */
+
 .main-galeria {
     padding: 20px;
     background-color: #f2f1d4; 
@@ -160,7 +160,7 @@ iframe {
     font-family: Arial, sans-serif;
 }
 
-/* Grilla de galería */
+
 .grid-galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
@@ -203,7 +203,7 @@ iframe {
     }
 
     
-/*FORMULARIO*/
+
 
 .fondo-verde {
     background-color: #28a745; 
