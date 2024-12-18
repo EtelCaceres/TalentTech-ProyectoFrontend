@@ -5,9 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Vivero</title>
-    <link rel="stylesheet" href="../css/style.css">
-   
 
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQJlgGv4XNQFWSoUBrr4ZjSNp2Og+5RzMLI4nO7HA6YuQOKG4tzoK6Dkq" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+    
+        .formulario-container {
+            background-color: #ffffff;
+            border: 2px solid #4caf50;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 50px auto;
+            max-width: 600px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+    
+        .formulario-container h1 {
+            color: #388e3c;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    
+        label {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+    
+        .form-control {
+            border: 1px solid #81c784;
+            border-radius: 10px;
+        }
+    
+        .btn-primary {
+            background-color: #4caf50;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    
+        .btn-primary:hover {
+            background-color: #388e3c;
+        }
+    
+        .btn-secondary {
+            background-color: #c8e6c9;
+            border: none;
+            padding: 10px 20px;
+            color: #2e7d32;
+            border-radius: 10px;
+        }
+    
+        .btn-secondary:hover {
+            background-color: #81c784;
+            color: white;
+        }
+    
+        .imagen-central img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    
+       
+        .formulario-container .mb-3 {
+            margin-bottom: 25px; 
+        }
+    
+        .formulario-container h1 {
+            margin-bottom: 30px; 
+        }
+    
+        textarea#consulta {
+            margin-top: 10px; 
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -21,7 +101,7 @@
         <ul class="contenedor-lista ul">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="galeria.html">Galería</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
 
@@ -36,44 +116,48 @@
     </nav>
 
     <div id="contenedor-lista" class="imagen-central">
-        <img src="../img/ImagenCentralPortada.jpeg" alt="Descripción de la imagen">                
+        <img src="../img/ImagenCentralPortada.jpeg" alt="Descripción de la imagen">
     </div>
 
     <main>
-        <section class="fondo-verde">
-            <h1>Déjame tu consulta</h1>
-        </section>        
-
-        <form action="" method="post" class="formulario">
-            <fieldset>
-                <legend>Información Personal</legend>
-    
-                <label for="nombre">Nombre[*]</label>
-                <input type="text" name="nombre" id="nombre" size="20" maxlength="30" required><br><br>
-    
-                <label for="apellido">Apellido[*]</label>
-                <input type="text" name="apellido" id="apellido" size="20" maxlength="30" required><br><br>
-    
-                <label for="direccion">Dirección[*]</label>
-                <input type="text" name="direccion" id="direccion" size="40" maxlength="50" required><br><br>
-    
-                <label for="telefono">Número de Teléfono[*]</label>
-                <input type="tel" name="telefono" id="telefono" pattern="[0-9]{10}" placeholder="Ej: 1234567890" required><br><br>
-                 <label for="Correo Electronico">Correo Electronico[*]</label> ¨
-                 <input type="text" name="Correo" id="Correo Electronico" pattern="[0-9]{10}"  required><br><br>  
-            </fieldset>
-    
-            <fieldset>
-                <legend>Consulta</legend>
-    
-                <label for="consulta">Escribe tu consulta</label><br>
-                <textarea name="consulta" id="consulta" cols="40" rows="10" placeholder="Escribe aquí tu consulta (máx. 300 caracteres)" maxlength="300" required></textarea>
-            </fieldset>
-    
-            <br>
-            <input type="submit" value="Enviar Consulta">
-            <input type="reset" value="Borrar Datos">
-        </form>
+        <div class="formulario-container">
+            <h1>Déjanos tu consulta</h1>
+            <form action="https://formspree.io/f/xanygpbd" method="post">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre [*]</label>
+                    <input type="text" name="nombre" id="nombre" class="form-control" maxlength="30" required>
+                </div>
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido [*]</label>
+                    <input type="text" name="apellido" id="apellido" class="form-control" maxlength="30" required>
+                </div>
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Dirección [*]</label>
+                    <input type="text" name="direccion" id="direccion" class="form-control" maxlength="50" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Número de Teléfono [*]</label>
+                    <input type="tel" name="telefono" id="telefono" class="form-control" pattern="[0-9]{10}" placeholder="Ej: 1234567890" required>
+                </div>
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo Electrónico [*]</label>
+                    <input type="email" name="correo" id="correo" class="form-control" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="consulta" class="form-label"></label>
+                    <textarea name="consulta" id="consulta" class="form-control" rows="5" maxlength="300" placeholder="Escribe tu consulta aquí (máx. 300 caracteres)" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Enviar Consulta</button>
+                    <button type="reset" class="btn btn-secondary">Borrar Datos</button>
+                </div>
+            </form>
+        </div>
     </main>
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pwh2zfy3UnGydOYodXyIEK5MxFDJgyPc5GhD5RzFlTQUyANVuhKV3S3kmNn7aI5X" crossorigin="anonymous"></script>
 </body>
+
 </html>
