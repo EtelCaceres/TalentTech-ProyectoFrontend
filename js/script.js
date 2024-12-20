@@ -1,4 +1,4 @@
-
+//Funcion para crear un array de productos
 function ObtenerProductos() {
     const productos = [
         {
@@ -38,20 +38,15 @@ function ObtenerProductos() {
             amount: 600
         }
     ];
-
+    console.log(productos)
     return productos;
 }
 
 
-
+//Funcion para obtener la descripcion de un producto segun su id
 function ObtenerDescripcionProducto(id) {
-    // Genera la lista de productos usando la función ObtenerProductos
     const productos = ObtenerProductos();
-
-    // Busca el producto con el id correspondiente
-    const productoEncontrado = productos.find(producto => producto.id === id);
-
-    // Verifica si se encontró el producto y retorna su descripción
+    const productoEncontrado = productos.find(producto => producto.id === id);    
     if (productoEncontrado) {
         return productoEncontrado.description;
     } else {
@@ -60,16 +55,11 @@ function ObtenerDescripcionProducto(id) {
 }
 
 
-function ImprimirDescripcionPorConsola(id){
-    const descripción = ObtenerDescripcionProducto(id)
-    console.log(descripción)
-}
-
-
+//Funcion para expandir la tarjeta de productos y agregar descripcion de manera dinamica
 function expandirTarjeta(id) {
     const productos = ObtenerProductos();
     const producto = productos.find(p => p.id === id);
-    
+    //manipulacion del DOM
     if (producto) {
       const tarjeta = document.getElementById(`producto${id}`);
       const cardBody = tarjeta.querySelector(".card-body");
@@ -88,6 +78,8 @@ function expandirTarjeta(id) {
     }
   }
   
+  
+  //Funcion para cerrar la tarjeta expandida
   function colapsarTarjeta(id) {
     const tarjeta = document.getElementById(`producto${id}`);
     const cardBody = tarjeta.querySelector(".card-body");
