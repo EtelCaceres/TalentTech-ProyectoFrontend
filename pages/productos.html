@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Vivero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav class="barra-navegacion">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../img/LogoEmpresa.png" alt="Logo de la empresa" />
+            </a>
+        </div>
+
+        <ul class="contenedor-lista ul">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="productos.html">Productos</a></li>
+        </ul>
+
+        <div class="redes-sociales">
+            <a href="https://youtube.com/@suculentaslove?si=uGCqCGYgVAMf0cbF" target="_blank" aria-label="Facebook">
+                <img src="../img/youtube.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.tiktok.com/@etelvinacaceres4?_t=8rQUdzvbaCt&_r=1" target="_blank" aria-label="Instagram">
+                <img src="../img/tiktok.svg" alt="Instagram" />
+            </a>
+        </div>
+    </nav>
+
+    <div id="contenedor-lista" class="imagen-central">
+        <img src="../img/ImagenCentralPortada.jpeg" alt="Descripción de la imagen">                
+    </div>
+
+
+    <main class="container py-5">
+        <h1>Productos</h1><br>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+          <!-- Tarjeta 1 -->
+          <div class="col" id="producto1">
+            <div class="card h-100 custom-card">
+              <img src="../img/productsImages/01.jpg" class="card-img-top custom-image" alt="Imagen 1">
+              <div class="card-body">
+                <div class="description-container" style="display: none;"></div>
+                <button class="btn btn-primary" onclick="expandirTarjeta(1)">Ver detalle</button>
+                <button class="btn btn-danger close-btn" style="display: none;" onclick="colapsarTarjeta(1)">Cerrar</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tarjeta 2 -->
+          <div class="col" id="producto2">
+            <div class="card h-100 custom-card">
+              <img src="../img/productsImages/02.jpg" class="card-img-top custom-image" alt="Imagen 2">
+              <div class="card-body">
+                <div class="description-container" style="display: none;"></div>
+                <button class="btn btn-primary" onclick="expandirTarjeta(2)">Ver detalle</button>
+                <button class="btn btn-danger close-btn" style="display: none;" onclick="colapsarTarjeta(2)">Cerrar</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tarjeta 3 -->
+          <div class="col" id="producto3">
+            <div class="card h-100 custom-card">
+              <img src="../img/productsImages/03.jpg" class="card-img-top custom-image" alt="Imagen 3">
+              <div class="card-body">
+                <div class="description-container" style="display: none;"></div>
+                <button class="btn btn-primary" onclick="expandirTarjeta(3)">Ver detalle</button>
+                <button class="btn btn-danger close-btn" style="display: none;" onclick="colapsarTarjeta(3)">Cerrar</button>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Tarjeta 4 -->
+          <div class="col" id="producto4">
+            <div class="card h-100 custom-card">
+              <img src="../img/productsImages/04.jpg" class="card-img-top custom-image" alt="Imagen 4">
+              <div class="card-body">
+                <div class="description-container" style="display: none;"></div>
+                <button class="btn btn-primary" onclick="expandirTarjeta(4)">Ver detalle</button>
+                <button class="btn btn-danger close-btn" style="display: none;" onclick="colapsarTarjeta(4)">Cerrar</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tarjeta 5 -->
+          <div class="col" id="producto5">
+            <div class="card h-100 custom-card">
+              <img src="../img/productsImages/05.jpg" class="card-img-top custom-image" alt="Imagen 5">
+              <div class="card-body">
+                <div class="description-container" style="display: none;"></div>
+                <button class="btn btn-primary" onclick="expandirTarjeta(5)">Ver detalle</button>
+                <button class="btn btn-danger close-btn" style="display: none;" onclick="colapsarTarjeta(5)">Cerrar</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tarjeta 6 -->
+          <div class="col" id="producto6">
+            <div class="card h-100 custom-card">
+              <img src="../img/productsImages/06.jpg" class="card-img-top custom-image" alt="Imagen 6">
+              <div class="card-body">
+                <div class="description-container" style="display: none;"></div>
+                <button class="btn btn-primary" onclick="expandirTarjeta(6)">Ver detalle</button>
+                <button class="btn btn-danger close-btn" style="display: none;" onclick="colapsarTarjeta(6)">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
