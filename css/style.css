@@ -99,14 +99,20 @@
 }
 
 
+.custom-bg {
+    background-color: #f2f1d4;
+}
+
+.custom-bg .navbar-nav .nav-link {
+    font-weight: bold; /* Aplica negrita a los enlaces */
+}
+
 .imagen-central {
     width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    z-index: 1;
+    max-height: 400px;
+    object-fit: cover;
 }
+
 
 .imagen-central img {
     width: 100%; 
@@ -136,13 +142,13 @@ main {
     align-items: center;          
 }
 
-.fondo-verde, .fondo-amarillo {
+/* .fondo-verde, .fondo-amarillo {
     width: 100%;                 
     position: relative;           
     display: flex;
     justify-content: center;      
     align-items: center;          
-}
+} */
 
 .fondo-verde {
     background-color: #cad1c5;
