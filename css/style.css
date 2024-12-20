@@ -142,13 +142,13 @@ main {
     align-items: center;          
 }
 
-.fondo-verde, .fondo-amarillo {
+/* .fondo-verde, .fondo-amarillo {
     width: 100%;                 
     position: relative;           
     display: flex;
     justify-content: center;      
     align-items: center;          
-}
+} */
 
 .fondo-verde {
     background-color: #cad1c5;
