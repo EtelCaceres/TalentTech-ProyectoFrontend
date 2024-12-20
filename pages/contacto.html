@@ -11,33 +11,38 @@
 </head>
 
 <body class="bg-light">
-    <nav class="barra-navegacion">
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../img/LogoEmpresa.png" alt="Logo de la empresa" />
+    <!-- Barra de navegacion -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/LogoEmpresa.png" alt="Logo de la empresa" class="d-inline-block align-text-top" style="height: 50px;">
             </a>
-        </div>
-
-        <ul class="contenedor-lista ul">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="productos.html">Productos</a></li>
-        </ul>
-
-        <div class="redes-sociales">
-            <a href="https://youtube.com/@suculentaslove?si=uGCqCGYgVAMf0cbF" target="_blank" aria-label="Facebook">
-                <img src="../img/youtube.svg" alt="Facebook" />
-            </a>
-            <a href="https://www.tiktok.com/@etelvinacaceres4?_t=8rQUdzvbaCt&_r=1" target="_blank" aria-label="Instagram">
-                <img src="../img/tiktok.svg" alt="Instagram" />
-            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                </ul>
+            </div>
+            <div class="d-flex">
+                <a href="https://youtube.com/@suculentaslove?si=uGCqCGYgVAMf0cbF" target="_blank" aria-label="YouTube" class="me-2">
+                    <img src="../img/youtube.svg" alt="YouTube" style="height: 30px;">
+                </a>
+                <a href="https://www.tiktok.com/@etelvinacaceres4?_t=8rQUdzvbaCt&_r=1" target="_blank" aria-label="TikTok">
+                    <img src="../img//tiktok.svg" alt="TikTok" style="height: 30px;">
+                </a>
+            </div>
         </div>
     </nav>
 
-    <div id="contenedor-lista" class="imagen-central">
-        <img src="../img/ImagenCentralPortada.jpeg" alt="Descripción de la imagen">
+    <!-- Imagen central -->
+    <div class="container-fluid p-0 mt-5">
+        <img src="../img//ImagenCentralPortada.jpeg" alt="Descripción de la imagen" class="img-fluid imagen-central">
     </div>
 
     <main class="d-flex justify-content-center align-items-center vh-100 bg-light">
