@@ -43,79 +43,63 @@ function ObtenerProductos() {
 }
 
 
-// function verificarFormulario() {
-//     const inputs = document.querySelectorAll('form input, form textarea');
-//     let completo = true;
 
-//     inputs.forEach(input => {
-//         if (!input.value.trim()) {
-//             completo = false;
-//         }
-//     });
+function ObtenerDescripcionProducto(id) {
+    // Genera la lista de productos usando la función ObtenerProductos
+    const productos = ObtenerProductos();
 
-//     if (completo) {
-//         console.log("Todos los campos están completos.");
-//     } else {
-//         console.log("Faltan completar algunos campos del formulario.");
-//     }
-// }
+    // Busca el producto con el id correspondiente
+    const productoEncontrado = productos.find(producto => producto.id === id);
 
-// function generarProductos() {
-//     const productos = [
-//         "Producto 1",
-//         "Producto 2",
-//         "Producto 3",
-//         "Producto 4",
-//     ];
-
-//     console.log("Lista de productos:");
-//     productos.forEach(producto => console.log(producto));
-// }
-
-// function configurarEventosProductos() {
-//     const productos = document.querySelectorAll('.producto');
-//     productos.forEach(producto => {
-//         producto.addEventListener('click', () => {
-//             const descripcion = producto.getAttribute('data-descripcion');
-//             alert(`Descripción del producto: ${descripcion}`);
-//         });
-//     });
-// }
-
-// function mostrarProductos() {
-//     const productos = [
-//         { nombre: "Producto 1", descripcion: "Descripción 1" },
-//         { nombre: "Producto 2", descripcion: "Descripción 2" },
-//         { nombre: "Producto 3", descripcion: "Descripción 3" },
-//         { nombre: "Producto 4", descripcion: "Descripción 4" },
-//     ];
-
-//     const container = document.getElementById("productosContainer");
-//     container.innerHTML = "";
-
-//     productos.forEach(producto => {
-//         const template = `
-//             <div class="producto" data-descripcion="${producto.descripcion}">
-//                 <h3>${producto.nombre}</h3>
-//                 <p>${producto.descripcion}</p>
-//             </div>
-//         `;
-//         container.innerHTML += template;
-//     });
-
-//     configurarEventosProductos(); 
-// }
+    // Verifica si se encontró el producto y retorna su descripción
+    if (productoEncontrado) {
+        return productoEncontrado.description;
+    } else {
+        return "Producto no encontrado";
+    }
+}
 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     generarProductos();
-//     mostrarProductos();
+function ImprimirDescripcionPorConsola(id){
+    const descripción = ObtenerDescripcionProducto(id)
+    console.log(descripción)
+}
 
-//     const formulario = document.querySelector("form");
-//     if (formulario) {
-//         formulario.addEventListener("submit", (e) => {
-//             e.preventDefault();
-//             verificarFormulario();
-//         });
-//     }
-// });
+
+function expandirTarjeta(id) {
+    const productos = ObtenerProductos();
+    const producto = productos.find(p => p.id === id);
+    
+    if (producto) {
+      const tarjeta = document.getElementById(`producto${id}`);
+      const cardBody = tarjeta.querySelector(".card-body");
+      const descripcionContainer = cardBody.querySelector(".description-container");
+      const closeBtn = cardBody.querySelector(".close-btn");
+  
+      // Agrega la descripción
+      descripcionContainer.textContent = producto.description;
+      descripcionContainer.style.display = "block";
+  
+      // Expande la tarjeta
+      tarjeta.querySelector(".custom-card").classList.add("expanded");
+  
+      // Muestra el botón de cierre
+      closeBtn.style.display = "inline-block";
+    }
+  }
+  
+  function colapsarTarjeta(id) {
+    const tarjeta = document.getElementById(`producto${id}`);
+    const cardBody = tarjeta.querySelector(".card-body");
+    const descripcionContainer = cardBody.querySelector(".description-container");
+    const closeBtn = cardBody.querySelector(".close-btn");
+  
+    // Oculta la descripción
+    descripcionContainer.style.display = "none";
+  
+    // Colapsa la tarjeta
+    tarjeta.querySelector(".custom-card").classList.remove("expanded");
+  
+    // Oculta el botón de cierre
+    closeBtn.style.display = "none";
+  }

@@ -387,3 +387,20 @@ form input[type="reset"]:hover {
   transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
+
+.custom-card.expanded {
+    transform: scale(1.2); /* Agranda la tarjeta */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    z-index: 10; /* Asegura que la tarjeta quede encima */
+  }
+  
+  .description-container {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .close-btn {
+    margin-top: 10px;
+  }

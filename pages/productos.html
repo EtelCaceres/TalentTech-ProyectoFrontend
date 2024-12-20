@@ -44,62 +44,63 @@
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
           <!-- Tarjeta 1 -->
-          <div class="col">
+          <div class="col" id="producto1">
             <div class="card h-100 custom-card">
               <img src="../img/productsImages/01.jpg" class="card-img-top custom-image" alt="Imagen 1">
               <div class="card-body">
-                <!-- <h5 class="card-title">Sarmentosa</h5> -->
-                <button class="btn btn-primary" onclick="llamarJson(1)">Ver detalle</button>
+                <div class="description-container" style="display: none;"></div>
+                <button class="btn btn-primary" onclick="expandirTarjeta(1)">Ver detalle</button>
+                <button class="btn btn-danger close-btn" style="display: none;" onclick="colapsarTarjeta(1)">Cerrar</button>
               </div>
             </div>
           </div>
           
           <!-- Tarjeta 2 -->
-          <div class="col">
+          <div class="col" id="producto2">
             <div class="card h-100 custom-card">
               <img src="../img/productsImages/02.jpg" class="card-img-top custom-image" alt="Imagen 2">
               <div class="card-body">
-                <button class="btn btn-primary" onclick="llamarJson(2)">Ver detalle</button>
+                <button class="btn btn-primary" onclick="ObtenerDescripcionProducto(2)">Ver detalle</button>
               </div>
             </div>
           </div>
           
           <!-- Tarjeta 3 -->
-          <div class="col">
+          <div class="col" id="producto3">
             <div class="card h-100 custom-card">
               <img src="../img/productsImages/03.jpg" class="card-img-top custom-image" alt="Imagen 3">
               <div class="card-body">
-                <button class="btn btn-primary" onclick="llamarJson(3)">Ver detalle</button>
+                <button class="btn btn-primary" onclick="ObtenerDescripcionProducto(3)">Ver detalle</button>
               </div>
             </div>
           </div>
     
           <!-- Tarjeta 4 -->
-          <div class="col">
+          <div class="col" id="producto4">
             <div class="card h-100 custom-card">
               <img src="../img/productsImages/04.jpg" class="card-img-top custom-image" alt="Imagen 4">
               <div class="card-body">
-                <button class="btn btn-primary" onclick="llamarJson(4)">Ver detalle</button>
+                <button class="btn btn-primary" onclick="ObtenerDescripcionProducto(4)">Ver detalle</button>
               </div>
             </div>
           </div>
           
           <!-- Tarjeta 5 -->
-          <div class="col">
+          <div class="col" id="producto5">
             <div class="card h-100 custom-card">
               <img src="../img/productsImages/05.jpg" class="card-img-top custom-image" alt="Imagen 5">
               <div class="card-body">
-                <button class="btn btn-primary" onclick="llamarJson(5)">Ver detalle</button>
+                <button class="btn btn-primary" onclick="ObtenerDescripcionProducto(5)">Ver detalle</button>
               </div>
             </div>
           </div>
           
           <!-- Tarjeta 6 -->
-          <div class="col">
+          <div class="col" id="producto6">
             <div class="card h-100 custom-card">
               <img src="../img/productsImages/06.jpg" class="card-img-top custom-image" alt="Imagen 6">
               <div class="card-body">
-                <button class="btn btn-primary" onclick="llamarJson(6)">Ver detalle</button>
+                <button class="btn btn-primary" onclick="ObtenerDescripcionProducto(6)">Ver detalle</button>
               </div>
             </div>
           </div>
@@ -107,5 +108,6 @@
       </main>    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
